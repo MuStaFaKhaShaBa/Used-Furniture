@@ -11,7 +11,23 @@
 
   gtag('config', 'AW-16710231231');
 </script>
-
+<!-- Event snippet for جهة اتصال (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16710231231/FlVYCJiEo_MZEL_Jh6A-',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +46,7 @@
 <body class="">
 
   <!-- Floating Button -->
-  <a href="https://wa.me/+96550637028" class="floating-button" title="Chat with me on WhatsApp" target="_blank">
+  <a href="https://wa.me/+96550637028" onclick="gtag_report_conversion(`https://mustafakhashaba.github.io/Used-Furniture/`)" class="floating-button" title="Chat with me on WhatsApp" target="_blank">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -104,14 +120,14 @@
       <div class="mt-4">
         <div class="d-flex gap-2 justify-content-center">
           <!-- Phone Call Button -->
-          <a href="tel:50637028" class="btn btn-light d-flex align-items-center p-2 mt-2" title="اتصل بي"
+          <a href="tel:50637028" onclick="gtag_report_conversion(`https://mustafakhashaba.github.io/Used-Furniture/`)" class="btn btn-light d-flex align-items-center p-2 mt-2" title="اتصل بي"
             aria-label="اتصل بي">
             <i class="fa-solid fa-phone me-2" aria-hidden="true"></i>
             اتصل بي
           </a>
 
           <!-- WhatsApp Button -->
-          <a href="https://wa.me/+96550637028" class="btn btn-outline-light d-flex align-items-center p-2 mt-2"
+          <a href="https://wa.me/+96550637028" onclick="gtag_report_conversion(`https://mustafakhashaba.github.io/Used-Furniture/`)" class="btn btn-outline-light d-flex align-items-center p-2 mt-2"
             title="الدردشة عبر واتساب" aria-label="الدردشة عبر واتساب">
             <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i>
             واتساب
@@ -187,14 +203,14 @@
   
             <div class="contact-buttons mt-4 d-flex gap-2">
               <!-- Phone Call Button -->
-              <a href="tel:50637028" class="btn btn-secondary d-flex align-items-center p-2 mt-2" title="اتصل بنا"
+              <a href="tel:50637028" onclick="gtag_report_conversion(`https://mustafakhashaba.github.io/Used-Furniture/`)" class="btn btn-secondary d-flex align-items-center p-2 mt-2" title="اتصل بنا"
                 aria-label="اتصل بنا">
                 <i class="fa-solid fa-phone me-2" aria-hidden="true"></i>
                 اتصل بنا
               </a>
   
               <!-- WhatsApp Button -->
-              <a href="https://wa.me/+96550637028" class="btn btn-outline-secondary d-flex align-items-center p-2 mt-2"
+              <a href="https://wa.me/+96550637028" onclick="gtag_report_conversion(`https://mustafakhashaba.github.io/Used-Furniture/`)" class="btn btn-outline-secondary d-flex align-items-center p-2 mt-2"
                 title="الدردشة عبر واتساب" aria-label="الدردشة عبر واتساب">
                 <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i>
                 واتساب
